@@ -1,0 +1,112 @@
+<div class="home">
+  <article class="left">
+    <div class="left_inside">
+      <div class="dashboard">
+        <div class="header"></div>
+        <div class="myname">Anuluca</div>
+        <span class="downArrow"></span>
+      </div>
+      <div class="repositories">
+        Repositories
+        <a href="https://www.anuluca.icu/"><button><div class="btn_logo"></div><span>New</span><div class="btn_cover"></div></button></a>
+        <input type="text" placeholder="Find a repository..." />
+        <div
+          v-for="(repo,index) in repositories"
+          :key="repo.index"
+          class="myrepositories"
+        >
+          <img :src="repo.iconUrl" alt="" />
+          <a :href="'http://' + repo.name" class="repo_title">{{repo.name}}</a>
+        </div>
+      </div>
+      <div class="yourteams">
+        <p class="yourTeams_title">Your teams</p>
+        <p class="yourTeams_content">You don’t belong to any teams yet!</p>
+      </div>
+    </div>
+  </article>
+
+  <div class="middle">
+    <div class="middle_inside">
+      <news v-for="(newsli,index) in mainContent" :deliverMsg="newsli" :key="index"></news>
+    </div>
+    <div class="notice">
+      <div class="proptip">
+        <div class="PropTip_logo"></div>
+        <span
+          ><b>ProTip!</b> The feed shows you events from people you
+          <a href="#">follow </a> and repositories you
+          <a href="#">watch</a>.</span
+        >
+      </div>
+      <div class="subscribe"><div class="Subscribe_logo"></div><span>Subscribe to your news feed</span></div>
+    </div>
+
+    <div class="footer">
+      <div class="left_footer">
+        <div class="left_footer_inner">
+          <div class="gitlogo"></div>
+          <span>© 2020 Anuluca, Inc.</span>
+        </div>
+      </div>
+      <div class="right_footer">
+        <div class="right_footer_inner">
+        <ul>
+          <li>Blog</li>
+          <li>About</li>
+          <li>Shop</li>
+          <li>Contact Anuluca</li>
+          <li>Pricing</li>
+        </ul>
+        <ul>
+          <li>API</li>
+          <li>Training</li>
+          <li>Status</li>
+          <li>Security</li>
+        </ul>
+        <ul>
+          <li>Terms</li>
+          <li>Privacy</li>
+          <li>Help</li>
+        </ul>
+      </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="right">
+    <div class="ad" :class="{displayNone:displayNone}">
+      <button class="close" @click="removead">
+        <svg
+          height="16"
+          aria-label="Dismiss"
+          class="octicon octicon-x"
+          viewBox="0 0 16 16"
+          version="1.1"
+          width="16"
+          role="img"
+        >
+          <path
+            fill-rule="evenodd"
+            d="M3.72 3.72a.75.75 0 011.06 0L8 6.94l3.22-3.22a.75.75 0 111.06 1.06L9.06 8l3.22 3.22a.75.75 0 11-1.06 1.06L8 9.06l-3.22 3.22a.75.75 0 01-1.06-1.06L6.94 8 3.72 4.78a.75.75 0 010-1.06z"
+          ></path>
+        </svg>
+      </button>
+      <div class="ad_in">
+        <b>GitHub for mobile</b>
+        <p>
+          Projects, ideas, & code to go. Available natively for Android and iOS.
+        </p>
+      </div>
+      <div class="download_url">
+        <a href="https://www.anuluca.icu/"><div class="appstore"></div></a>
+        <a href="https://www.anuluca.icu/"></a><div class="googleplay"></div></a>
+      </div>
+    </div>
+    <div class="text1">Explore repositories</div>
+    <div class="rep_right">
+      <reportoryli  v-for="(newsli,index) in mainContent.slice(0,3)" :deliverMsg="newsli" :key="index"></reportoryli>
+    </div>
+    <div class="text2">Explore more →</div>
+  </div>
+</div>

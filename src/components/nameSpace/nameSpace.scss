@@ -1,0 +1,42 @@
+.userInfo {
+  width: 150px;
+  height: 70%;
+  overflow: hidden;
+  float: right;
+  padding: 7px 30px 10px 0;
+  .downArrow {
+    display: inline-block;
+    width: 0;
+    height: 0;
+    vertical-align: middle;
+    content: "";
+    color: WHITE;
+    border-top-style: solid;
+    border-top-width: 4px;
+    border-right: 4px solid transparent;
+    border-bottom: 0 solid transparent;
+    border-left: 4px solid transparent;
+    margin-bottom: 14px;
+    margin-left: 5px;
+  }
+  .in{
+    float: right;
+    margin-left: 20px;
+    overflow: hidden;
+  }
+  .plus{
+    width: 12px;
+    height: 12px;
+    margin-top: 18px;
+    float: left;
+    background-image: url("../../assets/img/plus.png");
+  }
+  .ring{
+    width: 14px;
+    height: 16px;
+    margin-top: 16px;
+    float: left;
+    background-image: url("../../assets/img/ring.png");
+  }
+
+}

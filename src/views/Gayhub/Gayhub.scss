@@ -1,0 +1,318 @@
+.home {
+  display: flex;
+  justify-content: center;
+  height: 100%;
+}
+.header {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-image: url("../../assets/img/header_small.jpg");
+  background-size: 100% 100%;
+  display: inline-block;
+  cursor: pointer;
+}
+// .left_ph{
+//   flex:350px
+// }
+.left {
+  flex: 350;
+  background-color: white;
+  border-right: 1px solid rgb(225, 228, 232);
+  box-sizing: border-box;
+  position: sticky;
+  top: 0px;
+  height: 100vh;
+  .left_inside {
+    width: 80%;
+    margin-top: 35px;
+    .dashboard {
+      font-weight: 600;
+      height: 20px;
+      border-bottom: 1px solid rgb(225, 228, 232);
+      padding-bottom: 16px;
+      .myname {
+        height: 20px;
+        overflow: hidden;
+        display: inline-block;
+        margin-left: 6px;
+        cursor: pointer;
+      }
+      .downArrow {
+        display: inline-block;
+        width: 0;
+        height: 0;
+        vertical-align: middle;
+        content: "";
+        border-top-style: solid;
+        border-top-width: 4px;
+        border-right: 4px solid transparent;
+        border-bottom: 0 solid transparent;
+        border-left: 4px solid transparent;
+        margin-bottom: 10px;
+        margin-left: 5px;
+      }
+    }
+    .repositories {
+      margin-top: 24px;
+      font-weight: 600;
+      border-bottom: 1px solid rgb(225, 228, 232);
+      padding-bottom: 16px;
+      button {
+        background-color: rgb(46, 164, 79);
+        border: 1px solid rgb(43, 145, 72);
+        color: white;
+        position: relative;
+        overflow: hidden;
+        .btn_logo {
+          width: 13px;
+          height: 17px;
+          background-image: url("../../assets/img/new.png");
+          position: absolute;
+          background-size: 100% 100%;
+          top: 4px;
+          left: 12px;
+        }
+        span {
+          font-size: 12px !important;
+          line-height: 25px;
+          display: block;
+          margin: 0 5px 0 25px;
+        }
+      }
+      input {
+        width: 100%;
+        height: 30px;
+        margin-top: 9px;
+        box-sizing: border-box;
+        border: 1px solid rgb(225, 228, 232);
+        margin-bottom: 20px;
+      }
+      .myrepositories {
+        height: 30px;
+        .repo_img {
+          width: 14px;
+          height: 18px;
+        }
+        .repo_title {
+          display: inline-block;
+          overflow: hidden;
+          color: rgb(43, 126, 220);
+          margin-left: 10px;
+        }
+        .repo_title:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+  .yourteams {
+    margin-top: 22px;
+    p {
+      line-height: 25px;
+    }
+    .yourTeams_title {
+      font-weight: 600;
+    }
+  }
+}
+.middle {
+  flex: 1203;
+  .middle_inside {
+    margin-top: 15px;
+  }
+  .notice {
+    margin-top: 22px;
+    width: 92%;
+    height: 230px;
+    span {
+      color: #586069;
+    }
+    span,
+    a,
+    b {
+      font-size: 12px;
+    }
+  }
+}
+.right {
+  flex: 350;
+  padding-top: 33px;
+  .ad {
+    width: 90%;
+    height: 155px;
+    border-radius: 6px;
+    border: 1px solid rgb(225, 228, 232);
+    background-color: white;
+    position: relative;
+    margin-left: 0;
+    .close {
+      background-color: transparent;
+      border: 0;
+      width: auto;
+      height: auto;
+      position: absolute;
+      right: 3px;
+      top: 10px;
+      svg {
+        color: #979ca1 !important;
+      }
+    }
+    .ad_in {
+      margin-left: 15px;
+      margin-top: 20px;
+      margin-right: 15px;
+      b {
+        line-height: 20px;
+      }
+      p {
+        padding-top: 5px;
+        line-height: 20px;
+      }
+    }
+    .download_url {
+      overflow: hidden;
+      margin-left: 15px;
+      margin-top: 10px;
+      .appstore {
+        width: 120px;
+        height: 40px;
+        background-image: url("../../assets/img/app-store-badge.png");
+        background-size: cover;
+        float: left;
+      }
+      .googleplay {
+        width: 136px;
+        height: 40px;
+        background-image: url("../../assets/img/google-play-badge.png");
+        background-size: cover;
+        margin-left: 12px;
+        float: left;
+      }
+    }
+  }
+  .text1 {
+    font-weight: 600;
+    margin-top: 25px;
+  }
+  .rep_right {
+    margin-bottom: 10px;
+    margin-right: 30px;
+  }
+  .rep_li:last-of-type {
+    border: 0;
+  }
+  .text2 {
+    font-size: 12px;
+    color: #586069;
+  }
+}
+
+.displayNone {
+  display: none;
+}
+
+.project_detail {
+  color: #586069;
+  font-size: 12px;
+  line-height: 30px;
+  overflow: hidden;
+  div,
+  span {
+    font-size: 12px;
+  }
+  > div {
+    float: left;
+    margin-right: 18px;
+  }
+  .language {
+    div {
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      display: inline-block;
+      margin-right: 5px;
+    }
+  }
+  .stars {
+    div {
+      width: 17px;
+      height: 15px;
+      float: left;
+      margin-right: 5px;
+      background-image: url("../../assets/img/star.png");
+      background-size: 100% 100%;
+      margin-top: 7px;
+    }
+  }
+}
+
+.proptip {
+  .PropTip_logo {
+    width: 13px;
+    height: 18px;
+    background-image: url("../../assets/img/light.png");
+    background-size: cover;
+    float: left;
+    margin-right: 5px;
+  }
+  a {
+    color: #2b7edc;
+  }
+}
+.subscribe {
+  margin-top: 5px;
+  .Subscribe_logo {
+    width: 13px;
+    height: 13px;
+    background-image: url("../../assets/img/signal.png");
+    background-size: cover;
+    float: left;
+    margin-right: 5px;
+    margin-top: 2px;
+  }
+}
+
+.footer {
+  overflow: hidden;
+  display: flex;
+  height: 150px;
+  .left_footer {
+    height: 100%;
+    float: left;
+    flex: 3;
+    padding: 0 30px 0 30px;
+    .gitlogo {
+      width: 26px;
+      height: 25px;
+      background-image: url("../../assets/img/github_dan_PNG58.png");
+      background-size: cover;
+      float: left;
+      margin-right: 10px;
+    }
+    span {
+      font-size: 12px;
+      color: #6a737d;
+      line-height: 25px;
+    }
+  }
+  .right_footer {
+    height: 100%;
+    float: left;
+    flex: 7;
+    overflow: hidden;
+    .right_footer_inner {
+      display: flex;
+      width: 80%;
+      margin-left: 0;
+    }
+    ul {
+      flex: 1;
+      li {
+        font-size: 12px;
+        color: #6a737d;
+        line-height: 22px;
+      }
+    }
+  }
+}

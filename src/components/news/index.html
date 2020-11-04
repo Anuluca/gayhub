@@ -1,0 +1,39 @@
+<div class="news">
+  <!-- {{ deliverMsg }} -->
+  <div class="head_info">
+    <img :src="deliverMsg.headerIconUrl" alt="" />
+    <div>
+      <b>{{ deliverMsg.userName }}</b> {{ deliverMsg.operation }}
+      <b>{{ deliverMsg.objectName }}</b> <i>{{ deliverMsg.postTime }}</i>
+    </div>
+  </div>
+  <div class="project_info">
+    <div class="pl"></div>
+    <div class="project_info_in">
+      <p class="project_name">
+        {{ deliverMsg.objectName }}
+        <button @click="starit">
+          <div class="btn_logo" :class="starImgUrl"></div>
+          <span>{{star}}</span>
+          <div class="btn_cover"></div>
+        </button>
+      </p>
+      <p class="project_decoration">{{ deliverMsg.objectDiscrib }}</p>
+      <div class="project_detail">
+        <div class="language">
+          <div :style="dotColor"></div>
+          <span>{{ deliverMsg.language }}</span>
+        </div>
+        <a href="http://www.anuluca.icu/">
+          <div class="stars">
+            <div></div>
+            <span>{{ deliverMsg.stars }}</span>
+          </div>
+        </a>
+        <div class="updateTime">
+          Updated {{ deliverMsg.updateTime }}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
