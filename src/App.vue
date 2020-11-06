@@ -1,18 +1,34 @@
 <script>
 // 导入header.vue文件
+import { Component, Vue, Emit, Prop, Watch } from "vue-property-decorator";
+import Vuex from "vuex";
 import nameSpace from "@/components/nameSpace/nameSpace.vue";
-export default {
+@Component({
   components: {
     nameSpace: nameSpace
   }
-};
+})
+export default class MainPage extends Vue {
+  ifwidth = false;
+
+  addWidth(val) {
+    val == 0 ? (this.ifwidth = true) : (this.ifwidth = false);
+  }
+}
 </script>
 
 <template>
   <div id="app">
     <div class="navi">
       <router-link to="/"><div class="githublogo"></div></router-link>
-      <input type="text" placeholder="Search or jump to..." />
+      <input
+        type="text"
+        placeholder="Search or jump to..."
+        class="search"
+        :class="{ search_width: ifwidth }"
+        @click="addWidth(0)"
+        @blur="addWidth(1)"
+      />
       <router-link to="Pullrequests">Pull requests</router-link>
       <router-link to="Issues">Issues</router-link>
       <router-link to="Marcketplace">Marcketplace</router-link>
@@ -67,6 +83,9 @@ input {
   -webkit-transition: background-color 0.2s; /* Safari and Chrome */
   -o-transition: background-color 0.2s; /* Opera */
 }
+input {
+  outline: none;
+}
 .btn_cover:hover {
   background-color: rgba(0, 0, 0, 0.1);
 }
@@ -80,11 +99,11 @@ button {
 }
 
 // ...
-ul{
-    list-style: none;
-    margin: 0;
-    padding: 0;
-  }
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
 .navi {
   background-color: #24292e;
   font-weight: 600;
@@ -119,5 +138,12 @@ ul{
     width: 262px;
     margin-left: 64px;
   }
+}
+.search {
+  transition: all 0.2s;
+}
+.search_width {
+  width: 400px !important;
+  background-color: white!important;
 }
 </style>

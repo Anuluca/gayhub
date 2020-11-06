@@ -19,9 +19,18 @@ export default class Home extends Vue {
   repositories: any = repositories;
   mainContent: any = mainContent;
   displayNone = false;
+  profileDisplayNone = true;
 
   removead() {
     this.displayNone = true;
+  }
+
+  openDetail(val) {
+    console.log(this.profileDisplayNone);
+    
+    val == 0
+      ? (this.profileDisplayNone = false)
+      : (this.profileDisplayNone = true);
   }
 
   // mounted(){
