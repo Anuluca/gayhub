@@ -4,7 +4,7 @@
 import { Component, Vue, Emit, Prop, Watch } from "vue-property-decorator";
 import Vuex from "vuex";
 //假数据
-import { repositories, mainContent } from "./data.ts";
+import { repositories, mainContent } from "./data";
 //引入
 import news from "@/components/news/news.vue";
 import reportoryli from "@/components/reportoryli/reportoryli.vue";
